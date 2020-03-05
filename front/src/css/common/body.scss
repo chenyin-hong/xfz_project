@@ -1,0 +1,141 @@
+body{
+  background: #f2f2f2;
+}
+.main {
+  width: 100%;
+  background: #f2f2f2;
+  margin-top: 86px;
+
+  .waraper {
+    width: 1171px;
+    height: 100%;
+    margin: 22px auto;
+    overflow: hidden;
+
+    .left_wrapper {
+      height: 100%;
+      width: 800px;
+      float: left;
+    }
+    .right_wrapper{
+    width:358px ;
+    background: #ffffff;
+    float: right;
+    overflow: hidden;
+    .title_group{
+      padding:20px ;
+      width: 318px;
+      height: 44px;
+      .title_name{
+        float: left;
+        color: #212121;
+        font-size: 18px;
+        line-height: 44px;
+      }
+      .more{
+        float: right;
+        margin-right: 20px;
+        color: #5c87d9;
+        font-size: 14px;
+        line-height: 44px;
+      }
+    }
+    .advertis{
+      height: 131px;
+      width: 100%;
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+    .attention{
+      overflow: hidden;
+      width: 100%;
+      padding: 0px 20px;
+      .attention_left{
+        height: 100%;
+        float: left;
+        background: #ffffff;
+        li{
+          list-style: none;
+          background: url("https://xfz.cn/static/build/images/side-icon.png")no-repeat;
+          background-size:26% ;
+          font-size: 14px;
+          height: 50px;
+          line-height: 50px;
+          a{
+            margin-left: 64px;
+            text-decoration: none;
+            color: #878787;
+          }
+        }
+        .zhihu{
+            background-position:0 0px;
+          }
+        .weibo{
+            background-position:0 -50px;
+          }
+        .xiaofanzhuo{
+            background-position:0 -100px;
+          }
+      }
+      .attention_right{
+        height: 120px;
+        width:103px ;
+        float: right;
+        background: url("https://xfz.cn/static/build/images/wxQr.jpg")no-repeat;
+        background-size: 86px;
+        margin-right: 40px;
+        position: relative;
+        .shuoming{
+          font-size: 12px;
+          color: #878787;
+          position: absolute;
+          bottom: 0;
+        }
+
+      }
+    }
+    .news_recomment{
+      padding-right:20px;
+      padding-left:20px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      .left_shows{
+        width: 204px;
+        height: 71px;
+        float: left;
+        position: relative;
+        .title{
+          font-size: 16px;
+          color: #212121;
+        }
+        .more{
+          font-size: 12px;
+          color: #878787;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          .pum_time{
+            float: right;
+          }
+        }
+      }
+      .right_shows{
+        width: 100px;
+        height: 71px;
+        background: #fff3cc;
+        float: right;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+    }
+    }
+
+
+  }
+}

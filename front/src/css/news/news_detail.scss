@@ -1,0 +1,95 @@
+@import "../common/header";
+@import "../common/body";
+@import "../common/footer";
+.main{
+  .waraper{
+    .left_wrapper{
+      background:RGB(255,255,255) ;
+      .new_title{
+        padding: 20px;
+        h1{
+          color: #212121;
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+      .new_xinxi{
+        padding: 20px;
+        overflow: hidden;
+        margin-top: 20px;
+        color: #878787;
+        font-size: 14px;
+        line-height: 28px;
+        height: 28px;
+        .left{
+          float: left;
+          .shijian{
+            margin-left: 30px;
+          }
+          .fenlei{
+            margin-left: 30px;
+            background: #5c87d9;
+            color: #f2f2f2;
+            padding: 0 5px;
+            border-radius: 5%;
+          }
+        }
+        .right{
+          float: right;
+          span{
+            float: left;
+          }
+          .weixin_fenxiang{
+            background-image: url(https://xfz.cn/static/build/images/share.png);
+            background-size: 240%;
+            background-repeat: no-repeat;
+            width: 28px;
+            height: 28px;
+            float: left;
+          }
+          .weibo_fenxiang{
+            background-image: url(https://xfz.cn/static/build/images/share.png);
+            background-size: 240%;
+            background-repeat: no-repeat;
+            width: 28px;
+            height: 28px;
+            float: left;
+            margin-left: 20px;
+            background-position:-39px 0px ;
+          }
+        }
+      }
+      .article{
+        img{
+          max-width: 100%;
+        }
+      }
+      .pinglun{
+        width: 100%;
+        padding: 0 20px;
+        .tetile{
+          color: #212121;
+          font-size: 18px;
+          font-weight: 400;
+          margin-top: 20px;
+        }
+        .coment_textare{
+          margin-top: 20px;
+          width: 760px;
+          height: 80px;
+        }
+        .tijiao{
+          width: 760px;
+          button{
+            float: right;
+            background: #5c87d9;
+            font-size: 18px;
+            color: #f2f2f2;
+            border-radius: 10%;
+            padding: 0 5px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import "../common/header";
+@import "../common/footer";
+body{
+  background: RGB(242,242,242);
+}
+.main {
+  width: 100%;
+  background: RGB(242,242,242);
+  margin-top: 66px;
+  .class_daohang{
+    height: 56px;
+    width: 100%;
+    background: RGB(242,242,242);
+    box-shadow: 0 3px 3px RGB(219,219,219);
+    .libiao{
+      margin: 0 auto;
+      width: 1171px;
+      height: 100%;
+      line-height: 56px;
+      .title{
+        width: 120px;
+        height: 100%;
+        float: left;
+        color: #696969;
+        font-size: 24px;
+      }
+      .daohang{
+        float: left;
+        margin-left: 95px;
+        color: #888;
+        li{
+          float: left;
+          list-style: none;
+          margin: 0 20px;
+          a{
+            text-decoration: none;
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+
+  .waraper {
+    width: 1198px;
+    margin: 10px auto;
+    overflow: hidden;
+    .classlibiao{
+      width: 100%;
+      li{
+        width: 279px;
+        height: 282px;
+        background: RGB(255,255,255);
+        float: left;
+        list-style: none;
+        margin: 10px;
+        .shang{
+          width: 100%;
+          height: 159px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .xia{
+          width: 279-40px;
+          height: 282-159-40px;
+          padding: 20px;
+          .title{
+            color: #212121;
+            font-size: 24px;
+          }
+          .zuozhe{
+            color: #878787;
+            font-size: 14px;
+          }
+          .money{
+            color: red;
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}

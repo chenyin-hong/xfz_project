@@ -1,0 +1,70 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.header{
+  height: 66px;
+  width:100%;
+  background: #3a3a3a;
+  position:fixed ;
+  top:0px;
+  right: 0px;
+  left: 0px;
+  .navigation_bar{
+    height: 100%;
+    width: 1171px;
+    margin: auto;
+    overflow: hidden;
+
+    .logo{
+      height: 100%;
+      width: 140px;
+      margin-top: 8px;
+      float: left;
+      background: url("http://xfz.cn/static/build/images/logo.png")no-repeat;
+      a{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+    .navigation_list{
+      margin-left: 121px;
+      height: 66px;
+      float: left;
+      li{
+        float: left;
+        height: 66px;
+        list-style: none;
+        margin-left:21px;
+        margin-right:21px;
+        box-sizing: border-box;
+        a{
+          line-height: 66px;
+          text-decoration: none;
+          color: #fff3cc;
+          font-size: 18px;
+        }
+        }
+        li:hover{
+            border-bottom: 5px solid #5c87d9;
+      }
+    }
+
+    .singin_and_singup{
+      float: right;
+      height: 100%;
+      margin-right: 8px;
+
+      span{
+          line-height: 66px;
+          color: #fff3cc;
+          font-size: 18px;
+        a{
+          text-decoration: none;
+          color: #fff3cc;
+        }
+      }
+    }
+  }
+}

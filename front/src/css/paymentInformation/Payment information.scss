@@ -1,0 +1,68 @@
+@import "../common/header";
+@import "../common/footer";
+@import "../common/body";
+.main {
+  .waraper {
+    .left_wrapper {
+      .scroll{
+        width: 800px;
+        height: 200px;
+        overflow: hidden;
+        .scroll_group{
+          width: 800px;
+          height: 200px;
+          li{
+            width: 800px;
+            height: 200px;
+            float: left;
+            list-style: none;
+            img{
+              width: 800px;
+              height: 200px;
+            }
+          }
+        }
+      }
+      .zixunliebaio{
+          width: 800px;
+          li{
+            width: 371px;
+            height: 150px;
+            list-style: none;
+            border: #ccc solid 1px;
+            margin-left: 13px;
+            margin-right: 13px;
+            margin-top: 20px;
+            float: left;
+            .left{
+              height: 100%;
+              width:102px ;
+              float: left;
+              background: url("http://xfz.cn/static/build/images/web-bp-pc.png")no-repeat;
+            }
+            .right{
+              height: 150px;
+              width: 337-103px;
+              float: right;
+              .title{
+                font-size: 16px;
+                color: #212121;
+              }
+              .jieshao{
+                font-size: 14px;
+                color: #878787;
+                margin-top: 20px;
+              }
+              .money{
+                color: red;
+                font-size: 24px;
+                float: right;
+                margin-top: 35px;
+                margin-right: 20px;
+              }
+            }
+          }
+      }
+    }
+  }
+}

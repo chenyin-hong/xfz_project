@@ -1,0 +1,123 @@
+@import "../common/header";
+@import "../common/footer";
+@import "../common/body";
+.main{
+  .waraper{
+    .left_wrapper{
+      .scroll{
+        width: 800px;
+        height: 200px;
+        overflow: hidden;
+        .scroll_group{
+        width: 5*800px;
+        height: 200px;
+        li{
+          width: 800px;
+          height: 200px;
+          float: left;
+          list-style: none;
+          img{
+            width: 800px;
+            height: 200px;
+          }
+        }
+      }
+      }
+      .news_show{
+        width: 800px;
+        background: #ffffff;
+        margin-top: 8px;
+        .news_daohang{
+          height: 66px;
+          width: 795px;
+          background: #ffffff;
+          border-left: 5px solid #5c87d9;
+          border-bottom: 2px solid #f2f2f2 ;
+          ul{
+            li{
+              float: left;
+              list-style: none;
+              margin-left: 10px;
+              margin-right: 10px;
+              a{
+                font-size: 18px;
+                text-decoration: none;
+                line-height: 66px;
+                color: #878787;
+              }
+              a:hover{
+                color: #212121;
+              }
+            }
+          }
+        }
+        .news_show_list{
+        li{
+          padding: 20px;
+          overflow: hidden;
+          border-bottom: 2px solid #f2f2f2 ;
+          .news_jianjie{
+             .image_show{
+                height: 160px;
+                width: 224px;
+                background: #878787;
+                float: left;
+                img{
+                  height: 160px;
+                  width: 224px;
+                }
+            }
+            .news_content{
+              height: 160px;
+              width: 504px;
+              background: #ffffff;
+              float: right;
+              .title{
+                font-size: 22px;
+                a{
+                  color: #212121;
+                  text-decoration: none;
+                }
+                a:hover{
+                  color: #5c87d9;
+                }
+              }
+              .desc{
+                font-size: 14px;
+                color: #878787;
+                margin-top: 10px;
+              }
+              .more{
+                margin-top: 56px;
+                font-size: 14px;
+                color: #878787;
+                .author{float: right}
+                .pub-time{
+                  margin-left: 24px;
+                  margin-right: 10px;
+                  float: right
+                }
+              }
+
+            }
+          }
+        }
+      }
+      }
+      .more_butten{
+        margin-top: 30px;
+        text-align: center;
+        button{
+          width: 402px;
+          height: 44px;
+          border: none;
+          background:#d2dcea ;
+          color: #6d85ac;
+        }
+      }
+
+    }
+  }
+
+
+}
