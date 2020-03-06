@@ -15,7 +15,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var path = {
     'html': './templates/**/',
     'css': './src/css/**/',
-    'js': './src/js/',
+    'js': './src/js/**/',
     'images': './src/images/',
     'css_dist': './dist/css/',
     'js_dist': './dist/js/',

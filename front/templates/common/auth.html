@@ -3,16 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../dist/css/paymentInformation/auth.min.css">
+    <link rel="stylesheet" href="../../dist/css/common/auth.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1480344_vjn1kxo5we.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="../../src/js/common/auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
     <button class="singinanniu">singin/singup</button>
     <div class="mask_wrapper">
         <div class="wrapper">
-            <div class="closebtn"></div>
+            <div class="close">
+                <span class="close-btn icon-close iconfont"></span>
+            </div>
             <div class="up_in_wrapper">
-                <div class="singin_wrapper"></div>
-                <div class="singup_wrapper"></div>
+                <div class="singin_wrapper">
+                    <div class="qiehuanbtn">
+                        <span class="title">请登录</span>
+                        <span class="qiehuan">立即注册></span>
+                    </div>
+                    <ul>
+                        <li><input type="text" class="form-control" placeholder="请输入手机号码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1"></li>
+                        <li><input type="submit" class="form-control" value="立即登录" ></li>
+                    </ul>
+
+                </div>
+                <div class="singup_wrapper">
+                    <div class="qiehuanbtn">
+                        <span class="title">请注册</span>
+                        <span class="qiehuan">立即登录></span>
+                    </div>
+                    <ul>
+                        <li><input type="text" class="form-control" placeholder="手机号码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="图形验证码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="确认密码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" placeholder="手机验证码" aria-describedby="basic-addon1"></li>
+                        <li><input type="submit" class="form-control" value="立即注册" ></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
