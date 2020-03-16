@@ -1,5 +1,5 @@
 $(function () {
-    $(".singinanniu").click(function () {
+    $(".singin_and_singup").click(function () {
         $(".mask_wrapper").show();
     });
 
