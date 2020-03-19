@@ -16,7 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from . import view
+from apps.xfzauth import views
 
 urlpatterns = [
     path('', view.index),
+    path("fufei",view.fufei),
+    path("login",views.login_view,name="login"),
+    path("logindemo",views.logindemo),
+    path("out",views.logout_view)
 ]
