@@ -18,8 +18,8 @@ def restful(code = HttpCode.ok,message ="",data=None,kwargs=None):
 def ok():
     return restful()
 
-def parameter_erro(data = None):
-    return restful(code=HttpCode.parametererro,message="表单验证失败",data=data)
+def parameter_erro(data = None,message = ""):
+    return restful(code=HttpCode.parametererro,message=message,data=data)
 
 def unauth_erro(data=None):
     return restful(code=HttpCode.unautherro,message="你没有权限登录",data=data)

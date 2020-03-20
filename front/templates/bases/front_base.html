@@ -10,6 +10,7 @@
     {% block yangshiyinrus %}{% endblock %}
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="{% static "js/common/auth.min.js" %}"></script>
+    <script src="{% static "js/common/xfzajax.min.js" %}" ></script>
 </head>
 <body>
     <header class="header">
@@ -25,9 +26,20 @@
             </ul>
             <div class="singin_and_singup">
                 <span class="icon-dengluyonghu iconfont"></span>
-                <span><a href="javascript:void(0);">登录</a></span>
-                <span>/</span>
-                <span><a href="javascript:void(0);">注册</a></span>
+                {% if user.is_authenticated %}
+                    <span>{{ user.username }}</span>
+                    <div class="user-more-box">
+                        <i class="triangle"></i>
+                        {% if user.is_staff %}
+                            <a href="">管理系统</a>
+                        {% endif %}
+                        <a href="{% url 'logout' %}">退出登录</a>
+                    </div>
+                {% else %}
+                    <span><a href="javascript:void(0);">登录</a></span>
+                    <span>/</span>
+                    <span><a href="javascript:void(0);">注册</a></span>
+                {% endif %}
             </div>
         </div>
     </header>
@@ -79,10 +91,11 @@
                         <span class="qiehuan">立即注册></span>
                     </div>
                     <ul>
-                        <li><input type="text" class="form-control" placeholder="请输入手机号码" aria-describedby="basic-addon1"></li>
-                        <li><input type="text" class="form-control" placeholder="请输入密码" aria-describedby="basic-addon1"></li>
-                        <li style="font-size: 14px;color: #878787"><input type="checkbox" class="" value="">&nbsp&nbsp记住我</li>
-                        <li><input type="submit" style="background: #5c87d9;color: #ffffff" class="form-control" value="立即登录" ></li>
+                        {% csrf_token %}
+                        <li><input type="text" class="form-control" name="telephone" placeholder="请输入手机号码" aria-describedby="basic-addon1"></li>
+                        <li><input type="text" class="form-control" name="password" placeholder="请输入密码" aria-describedby="basic-addon1"></li>
+                        <li style="font-size: 14px;color: #878787"><input type="checkbox" name="remober" value="1">&nbsp&nbsp记住我</li>
+                        <li><input type="submit" style="background: #5c87d9;color: #ffffff" name="denglutijiao" class="form-control" value="立即登录" ></li>
                     </ul>
 
                 </div>

@@ -19,9 +19,9 @@ from . import view
 from apps.xfzauth import views
 
 urlpatterns = [
-    path('', view.index),
+    path('', view.index,name = 'home'),
     path("fufei",view.fufei),
     path("login",views.login_view,name="login"),
     path("logindemo",views.logindemo),
-    path("out",views.logout_view)
+    path("out",views.logout_view,name="logout")
 ]
