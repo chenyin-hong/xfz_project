@@ -96,6 +96,14 @@
         ul{
           li{
             list-style: none;
+            .disabled{
+              width: 150px;
+              float: right;
+              margin-left: 0px;
+              border: 1px solid #ccc;
+              cursor: not-allowed;
+              color: #ccc;
+            }
           }
         }
       }

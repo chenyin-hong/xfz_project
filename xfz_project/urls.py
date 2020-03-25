@@ -14,14 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from . import view
 from apps.xfzauth import views
+
 
 urlpatterns = [
     path('', view.index,name = 'home'),
     path("fufei",view.fufei),
     path("login",views.login_view,name="login"),
     path("logindemo",views.logindemo),
-    path("out",views.logout_view,name="logout")
+    path("out",views.logout_view,name="logout"),
+    path("account/",include('apps.xfzauth.urls')),
 ]

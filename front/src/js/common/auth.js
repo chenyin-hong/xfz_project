@@ -8,6 +8,8 @@ Auth.prototype.run=function () {
     var self = this;
     self.silentdianji();
     self.silentSinginTi();
+    self.listenImg_CaptchaEvent();
+    self.silentSmsCode();
 };
 
 Auth.prototype.silentMaskShow = function () {
@@ -77,6 +79,49 @@ Auth.prototype.silentSinginTi = function(){
         })
     })
 };
+
+//点击发送手机验证码
+Auth.prototype.silentSmsCode = function(){
+    var self = this;
+    var singupwrapper = $(".singup_wrapper");
+    var telephone = singupwrapper.find("input[name='telephone']");
+    var submit = singupwrapper.find("input[name='smsbtn']");
+    submit.click(function () {
+        var telephoneval = telephone.val();
+        xfzajax.get({
+            url: "account/sms_captcha",
+            data: {
+                "telephone":telephoneval
+            },
+            success:function (result) {
+                if (result['code']==200){
+                    var count = 60;
+                    var time=setInterval(function () {
+                        submit.val(count+"s");
+                        submit.attr(disabled,"disabled");
+                        count--;
+                        if (count<0){
+                            clearInterval(time);
+                            submit.val("发送验证码");
+                            submit.removeClass("disabled")
+                        }
+                    },1000)
+                }
+            }
+        })
+    })
+};
+
+//注册页面相关
+//点击刷新验证码
+Auth.prototype.listenImg_CaptchaEvent = function(){
+    var self = this;
+    var img_captcha = $(".img_captcha");
+    img_captcha.click(function () {
+        img_captcha.attr('src',"account/img_captcha/"+"?random="+Math.random())
+    })
+};
+
 
 $(function () {
     var auth = new Auth();
