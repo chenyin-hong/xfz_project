@@ -10,6 +10,7 @@ Auth.prototype.run=function () {
     self.silentSinginTi();
     self.listenImg_CaptchaEvent();
     self.silentSmsCode();
+    self.silentRegister();
 };
 
 Auth.prototype.silentMaskShow = function () {
@@ -98,12 +99,14 @@ Auth.prototype.silentSmsCode = function(){
                     var count = 60;
                     var time=setInterval(function () {
                         submit.val(count+"s");
-                        submit.attr(disabled,"disabled");
+                        submit.addClass("disabled");
+                        submit.removeAttr("style");
                         count--;
                         if (count<0){
                             clearInterval(time);
                             submit.val("发送验证码");
-                            submit.removeClass("disabled")
+                            submit.removeClass("disabled");
+                            submit.addClass("undisabled")
                         }
                     },1000)
                 }
@@ -120,6 +123,43 @@ Auth.prototype.listenImg_CaptchaEvent = function(){
     img_captcha.click(function () {
         img_captcha.attr('src',"account/img_captcha/"+"?random="+Math.random())
     })
+};
+
+//点击注册提交事件
+Auth.prototype.silentRegister = function(){
+  var self = this;
+  var singupwrapper = $(".singup_wrapper");
+  var telephone = singupwrapper.find("input[name='telephone']");
+  var username = singupwrapper.find("input[name='username']");
+  var password1 = singupwrapper.find("input[name='password1']");
+  var password2 = singupwrapper.find("input[name='password2']");
+  var imgcaptcha = singupwrapper.find("input[name='imgcaptcha']");
+  var smscaptcha = singupwrapper.find("input[name='smscaptcha']");
+  var registerbtn = singupwrapper.find("input[name='registerbtn']");
+  registerbtn.click(function () {
+      var telephoneval = telephone.val();
+      var usernameval = username.val();
+      var password1val = password1.val();
+      var password2val = password2.val();
+      var imgcaptchaval = imgcaptcha.val();
+      var smscaptchaval = smscaptcha.val();
+      xfzajax.post({
+          url:"account/register/",
+          data:{
+              "telephone":telephoneval,
+              "username":usernameval,
+              "password1":password1val,
+              "password2":password2val,
+              "imgcaptcha":imgcaptchaval,
+              "smscaptcha":smscaptchaval,
+          },
+          success:function (result) {
+              if (result['code']==200){
+                  window.location.reload();
+              }
+          }
+      })
+  })
 };
 
 

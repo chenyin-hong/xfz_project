@@ -26,4 +26,5 @@ urlpatterns = [
     path("logindemo",views.logindemo),
     path("out",views.logout_view,name="logout"),
     path("account/",include('apps.xfzauth.urls')),
+    path("cms/",include('apps.cms.urls'))
 ]

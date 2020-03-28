@@ -105,19 +105,20 @@
                         <span class="qiehuan">立即登录></span>
                     </div>
                     <ul>
+                        {% csrf_token %}
                         <li><input name="telephone" type="text" class="form-control" placeholder="手机号码" aria-describedby="basic-addon1"></li>
-                        <li><input type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1"></li>
+                        <li><input name="username" type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1"></li>
                         <li>
-                            <input style="width: 150px;float: left" type="text" class="form-control" placeholder="图形验证码" aria-describedby="basic-addon1">
+                            <input name="imgcaptcha" style="width: 150px;float: left" type="text" class="form-control" placeholder="图形验证码" aria-describedby="basic-addon1">
                             <span ><img class="img_captcha" src="{% url 'xfzauth:img_captcha' %}" alt="" style="height: 34px;width: 150px;float: right;margin-left: 0px;border: 1px solid #5c87d9;cursor: pointer"></span>
                         </li>
-                        <li><input type="text" class="form-control" placeholder="密码" aria-describedby="basic-addon1"></li>
-                        <li><input type="text" class="form-control" placeholder="确认密码" aria-describedby="basic-addon1"></li>
+                        <li><input name="password1" type="password" class="form-control" placeholder="密码" aria-describedby="basic-addon1"></li>
+                        <li><input name="password2" type="password" class="form-control" placeholder="确认密码" aria-describedby="basic-addon1"></li>
                         <li>
-                            <input style="width: 150px;float: left" type="text" class="form-control" placeholder="手机验证码" aria-describedby="basic-addon1">
+                            <input name="smscaptcha" style="width: 150px;float: left" type="text" class="form-control" placeholder="手机验证码" aria-describedby="basic-addon1">
                             <input style="width: 150px;float: right;margin-left: 0px;border: 1px solid #5c87d9;cursor: pointer" type="submit" class="form-control" value="立即发送验证码" name="smsbtn" id="smsbtn">
                         </li>
-                        <li><input type="submit" style="background: #5c87d9;color: #ffffff" class="form-control" value="立即注册" ></li>
+                        <li><input name="registerbtn" type="submit" style="background: #5c87d9;color: #ffffff" class="form-control" value="立即注册" ></li>
                     </ul>
                 </div>
             </div>

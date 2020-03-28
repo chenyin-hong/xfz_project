@@ -5,28 +5,43 @@
     <title>Title</title>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <style>
-        #tijiao{
-            background: #5c87d9;
-        }
         .disabled{
-            background: red;
+              width: 150px;
+              float: right;
+              margin-left: 0px;
+              border: 1px solid #ccc;
+              cursor: not-allowed;
+              color: red;
+              background: #c9c9c9;
+            }
+        .yangshi{
+              width: 150px;
+              float: right;
+              margin-left: 0px;
+              border: 1px solid #ccc;
+              cursor: pointer;
+              color: red;
+              background: gold;
         }
     </style>
 </head>
 <body>
-<input  type="submit" value="提交" id="tijiao">
+<input  type="submit" value="提交" id="tijiao" style="background: red;height: 36px">
 <script>
     $("#tijiao").click(function () {
         var count=10;
         var tijiao = $("#tijiao");
         var time=setInterval(function () {
             tijiao.val(count);
-            tijiao.attr("disabled",true;"background","red");
+            tijiao.removeAttr("style");
+            tijiao.addClass("disabled");
             count--;
-            if(count<0){
-                clearInterval(time)
+            if (count<0){
+                clearInterval(time);
+                tijiao.removeClass("disabled");
+                tijiao.addClass("yangshi")
             }
-        },1000)
+    },1000)
     })
 </script>
 
