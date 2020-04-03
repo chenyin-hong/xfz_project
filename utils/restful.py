@@ -15,8 +15,8 @@ def restful(code = HttpCode.ok,message ="",data=None,kwargs=None):
         json_dict.update(kwargs)
     return JsonResponse(json_dict)
 
-def ok():
-    return restful()
+def ok(data = None,message=""):
+    return restful(message=message,data=data)
 
 def parameter_erro(data = None,message = ""):
     return restful(code=HttpCode.parametererro,message=message,data=data)
